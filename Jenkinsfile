@@ -4,11 +4,6 @@ pipeline{
         maven "maven-3.6.1"
     }
     stages{
-        stage("Docker version"){
-            steps{
-                sh "docker version"
-            }
-        }
         stage("Checkout Stage"){
             steps{
                 git branch: 'production',
@@ -37,6 +32,11 @@ pipeline{
         stage("Package Stage"){
             steps{
                 sh "mvn package"
+            }
+        }
+        stage("Docker version"){
+            steps{
+                sh "docker version"
             }
         }
         stage("Docker Building Stage"){
