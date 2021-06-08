@@ -50,7 +50,7 @@ pipeline{
             }
         }
     }
-    /*post{
+    post{
         success{
             mail to: "kskouwp@gmail.com, pf6.team4@gmail.com",
             subject: "Jenkins - Successful Build : $BUILD_TAG",
@@ -61,5 +61,5 @@ pipeline{
             subject: "Jenkins - Unsuccessful Build : $BUILD_TAG",
             body: "Go check it out at $BUILD_URL"
         }
-    }  */  
+    }   
 }
