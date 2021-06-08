@@ -34,11 +34,11 @@ pipeline{
                 sh "mvn package"
             }
         }
-        // stage("Docker version"){
-        //     steps{
-        //         sh "docker version"
-        //     }
-        // }
+        stage("Docker version"){
+            steps{
+                sh "docker version"
+            }
+        }
       /*  stage("Docker Building Stage"){
             steps{ 
                 sh "docker build -t custom-jar-image ."   
