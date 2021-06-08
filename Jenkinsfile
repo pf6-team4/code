@@ -62,5 +62,9 @@ pipeline{
             body: "Go check it out at $BUILD_URL"
         }
     }  */  
+<<<<<<< feature
     //Takis Makis sakiasdasdasds
+=======
+    //Takis Makis asdadas
+>>>>>>> development
 }
