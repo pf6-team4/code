@@ -7,8 +7,8 @@ pipeline{
         stage("Checkout Stage"){
             steps{
                 git branch: 'production',
-                credentialsId: 'github_credentials',
-                url: 'https://github.com/pf6-team4/DevOps-Final-Project-Code.git'
+                credentialsId: 'git',
+                url: 'https://github.com/pf6-team4/code.git'
             }
         }
         stage("Compilation Stage"){
