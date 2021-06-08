@@ -39,7 +39,7 @@ pipeline{
                 sh "docker version"
             }
         }
-      /*  stage("Docker Building Stage"){
+        stage("Docker Building Stage"){
             steps{ 
                 sh "docker build -t custom-jar-image ."   
             }
@@ -48,7 +48,7 @@ pipeline{
             steps{
                 sh "docker run -d -p 5555:5555 custom-jar-image"
             }
-        }*/
+        }
     }
     /*post{
         success{
