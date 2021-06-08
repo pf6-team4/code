@@ -9,7 +9,7 @@ pipeline{
                 git branch: 'production',
                 credentialsId: 'github_credentials',
                 url: 'https://github.com/pf6-team4/code.git'
-            }
+            }/**/
         }
         stage("Compilation Stage"){
             steps{
