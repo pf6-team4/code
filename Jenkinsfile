@@ -55,7 +55,7 @@ pipeline{
         }
 	stage ("Deploy docker"){
 	     steps{
-                 ansiblePlaybook becomeUser: 'team4', credentialsId: 'ansible', playbook: '', sudoUser: 'team4'	     }
+                 ansiblePlaybook becomeUser: 'team4', credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 'dev.inv', playbook: 'docker_app_depluy.yml', sudoUser: 'team4'	     }
 	}
     }
     post{
