@@ -54,11 +54,6 @@ pipeline{
 	        sh "docker push  pf6team4/custom-jar-image"   
              }
         }
-        stage("Docker Running Stage"){
-            steps{
-                sh "docker run -d -p 5555:5555 custom-jar-image"
-            }
-        }
     }
     post{
         success{
