@@ -55,8 +55,8 @@ pipeline{
         }
 	stage ("Deploy docker"){
 	     steps{
-                 //ansiblePlaybook becomeUser: 'team4', credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 'dev.inv', playbook: 'docker_app_depluy.yml', sudoUser: 'team4'	     }
-		sh "ansible webservers -m ping"
+                 ansiblePlaybook becomeUser: 'team4', credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 'dev.inv', playbook: 'docker_app_depluy.yml', sudoUser: 'team4'	     }
+		//sh "ansible webservers -m ping"
 	     }
         }
     }
