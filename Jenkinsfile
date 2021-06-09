@@ -42,6 +42,7 @@ pipeline{
         stage("Docker Building Stage"){
             steps{ 
                 sh "docker build -t custom-jar-image ."   
+	        sh "docker tag custom-jar-image pf6team4/custom-jar-image"
             }
         }
         stage("push to dockerhub"){
@@ -49,8 +50,6 @@ pipeline{
 		withCredentials([string(credentialsId: 'dockerhub', variable: 'Dockerhubpwd')]) {
 		    sh "docker login -u pf6team4 -p ${Dockerhubpwd}"
 		}
-                sh "docker tag custom-jar-image pf6team4/custom-jar-image"
-        
 	        sh "docker push  pf6team4/custom-jar-image"   
              }
         }
