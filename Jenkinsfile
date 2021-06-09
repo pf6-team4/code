@@ -47,7 +47,7 @@ pipeline{
         stage("push to dockerhub"){
             steps{ 
 		withCredentials([string(credentialsId: 'dockerhub', variable: 'Dockerhubpwd')]) {
-		    sh "docker login -u pf6team4 -p ${Dockerhubpwd}"
+		    sh "docker login -u pf6team4 -p pf6team4/${Dockerhubpwd}"
 		}
                 sh "docker push  custom-jar-image"   
              }
