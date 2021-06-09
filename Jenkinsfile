@@ -41,7 +41,7 @@ pipeline{
         }
         stage("Docker Building Stage"){
             steps{ 
-                sh "docker build -t custom-jar-image ."   
+                sh "docker build -t pf6team4/custom-jar-image ."   
             }
         }
         stage("push to dockerhub"){
