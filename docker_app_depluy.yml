@@ -20,7 +20,8 @@
         name: docker-py
         state: present 
      -name: Start  the docker container 
-      docker_container: TodoApp container
+      docker_container:
+        name: ToDoApp
         image: "pf6team4/custom-jar-image"
         state: started
         published_ports:
