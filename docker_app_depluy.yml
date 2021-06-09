@@ -21,7 +21,7 @@
         state: present 
      -name: Start  the docker container 
       docker_container: TodoApp container
-      image: "pf6team4/custom-jar-image"
-      state: started
-      published_ports:
-        - 0.0.0.0:8080:8080
+        image: "pf6team4/custom-jar-image"
+        state: started
+        published_ports:
+          - 0.0.0.0:8080:8080
