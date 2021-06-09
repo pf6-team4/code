@@ -53,6 +53,11 @@ pipeline{
 	        sh "docker push  pf6team4/custom-jar-image"   
              }
         }
+	stage ("Deploy docker"){
+	     steps{
+		ansiblePlaybook credentialsId: 'Dev_server', disableHostKeyChecking: true, inventory: 'dev.inv', playbook: 'docker_app_depluy.yml'
+	     }
+	}
     }
     post{
         success{
