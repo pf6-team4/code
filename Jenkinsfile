@@ -44,14 +44,14 @@ pipeline{
                 sh "docker build -t custom-jar-image ."   
             }
         }
-        stage("push to dockerhub"){
+        /*stage("push to dockerhub"){
             steps{ 
-			    withCredentials([string(credentialsId: 'dockerhub', variable: 'Dockerhubpwd')]) {
-				    sh "docker login -u pf6team4 -p ${Dockerhubpwd}"
-			    }
+		withCredentials([string(credentialsId: 'dockerhub', variable: 'Dockerhubpwd')]) {
+		    sh "docker login -u pf6team4 -p ${Dockerhubpwd}"
+		}
                 sh "docker push  custom-jar-image ."   
              }
-        }
+        }*/
         stage("Docker Running Stage"){
             steps{
                 sh "docker run -d -p 5555:5555 custom-jar-image"
